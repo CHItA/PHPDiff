@@ -1,0 +1,25 @@
+{
+  "name": "chita/phpdiff",
+  "description": "Diff implementation written in PHP, supporting two and three-way diff generation",
+  "keywords": ["diff", "Three-way diff"],
+  "homepage": "https://github.com/CHItA/PHPDiff",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Máté Bartus",
+      "email": "mate.bartus@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.8",
+    "squizlabs/php_codesniffer": "~2.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "CHItA\\PHPDiff\\": "src/"
+    }
+  }
+}
