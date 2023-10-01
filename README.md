@@ -29,7 +29,7 @@ PHPDiff uses [semantic versioning](http://semver.org/).
 ## Tests
 PHPDiff uses automated tests to prevent code regressions.
 
-| v2.0: ![v2.0](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=v1.0) | master ![master](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=master) |
+| v2.0: ![v2.0](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=v2.0) | master ![master](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=master) |
 | --- | --- |
 
 ## License
