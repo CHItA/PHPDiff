@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - master
-      - v1.0
+      - v2.0
   pull_request:
     branches:
       - master
-      - v1.0
+      - v2.0
 
 jobs:
   phpcs:
