@@ -86,7 +86,10 @@ final class Differ extends DifferBase
 
         for ($i = 0; $i < $min; $i++) {
             if (($this->comparisonAlgorithm === null && $original[0] === $modified[0]) ||
-                ($this->comparisonAlgorithm !== null && $this->comparisonAlgorithm->compare($original[0], $modified[0]))) {
+                (
+                    $this->comparisonAlgorithm !== null &&
+                    $this->comparisonAlgorithm->compare($original[0], $modified[0])
+                )) {
                 $begin[] = array_shift($modified);
                 array_shift($original);
             } else {
@@ -114,7 +117,10 @@ final class Differ extends DifferBase
 
         for ($i = 0; $i < $min; $i++) {
             if (($this->comparisonAlgorithm === null && $revOrig[$i] === $revMod[$i]) ||
-                ($this->comparisonAlgorithm !== null && $this->comparisonAlgorithm->compare($revOrig[$i], $revMod[$i]))) {
+                (
+                    $this->comparisonAlgorithm !== null &&
+                    $this->comparisonAlgorithm->compare($revOrig[$i], $revMod[$i])
+                )) {
                 array_unshift($end, array_pop($modified));
                 array_pop($original);
             } else {
@@ -184,7 +190,11 @@ final class Differ extends DifferBase
             $j++;
         } while ($j < $total &&
             (
-                ($this->comparisonAlgorithm !== null && $this->comparisonAlgorithm->compare($lcs[$j], $original[0]) && $this->comparisonAlgorithm->compare($lcs[$j], $modified[0])) ||
+                (
+                    $this->comparisonAlgorithm !== null &&
+                    $this->comparisonAlgorithm->compare($lcs[$j], $original[0]) &&
+                    $this->comparisonAlgorithm->compare($lcs[$j], $modified[0])
+                ) ||
                 ($this->comparisonAlgorithm === null && $lcs[$j] === $original[0] && $lcs[$j] === $modified[0])
             )
         );

@@ -109,7 +109,8 @@ final class Differ3 extends DifferBase
                     if ($val['type'] === $previous) {
                         $output[$size - 1][0] = array_merge($output[$size - 1][0], $val[0]);
                         $changed = true;
-                    } elseif ($previous === -2 && ($val['type'] === DifferBase::ADDED || $val['type'] === DifferBase::REMOVED)) {
+                    } elseif ($previous === -2 &&
+                        ($val['type'] === DifferBase::ADDED || $val['type'] === DifferBase::REMOVED)) {
                         if ($val['type'] === DifferBase::ADDED) {
                             $output[$size - 1][1][0] = array_merge($output[$size - 1][1][0], $val[0]);
                             $changed = true;
@@ -171,9 +172,13 @@ final class Differ3 extends DifferBase
     {
         $begin = array();
 
-        for ($i = 0, $total = min(count($original), count($modified1), count($modified2)); $i < $total; $i++) {
-            if (($this->comparisonAlgorithm === null && $original[0] === $modified1[0] && $original[0] === $modified2[0]) ||
-                ($this->comparisonAlgorithm !== null && $this->comparisonAlgorithm->compare($original[0], $modified1[0]) && $this->comparisonAlgorithm->compare($original[0], $modified2[0]))) {
+        $total = min(count($original), count($modified1), count($modified2));
+        for ($i = 0; $i < $total; $i++) {
+            if (($this->comparisonAlgorithm === null && $original[0] === $modified1[0] &&
+                $original[0] === $modified2[0]) ||
+                ($this->comparisonAlgorithm !== null &&
+                $this->comparisonAlgorithm->compare($original[0], $modified1[0]) &&
+                $this->comparisonAlgorithm->compare($original[0], $modified2[0]))) {
                 $begin[] = array_shift($original);
                 array_shift($modified1);
                 array_shift($modified2);
@@ -202,8 +207,12 @@ final class Differ3 extends DifferBase
         $j = count($modified1) - 1;
         $k = count($modified2) - 1;
 
-        while (min($i, $j, $k) >= 0 && (($this->comparisonAlgorithm === null && $original[$i] === $modified1[$j] && $original[$i] === $modified2[$k]) ||
-            ($this->comparisonAlgorithm !== null && $this->comparisonAlgorithm->compare($original[$i], $modified1[$j]) && $this->comparisonAlgorithm->compare($original[$i], $modified2[$k])))
+        while (min($i, $j, $k) >= 0 && (
+            ($this->comparisonAlgorithm === null && $original[$i] === $modified1[$j] &&
+            $original[$i] === $modified2[$k]) ||
+            ($this->comparisonAlgorithm !== null &&
+            $this->comparisonAlgorithm->compare($original[$i], $modified1[$j]) &&
+            $this->comparisonAlgorithm->compare($original[$i], $modified2[$k])))
         ) {
             array_unshift($end, array_pop($original));
             array_pop($modified1);

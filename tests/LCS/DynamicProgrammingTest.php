@@ -16,7 +16,7 @@ use CHItA\PHPDiff\LongestCommonSubsequence\Algorithm\DynamicProgramming;
 
 class DynamicProgrammingTest extends LCSTestBase
 {
-    public function setUp()
+    public function setUp(): void
     {
         $this->LCSAlgorithm = new DynamicProgramming();
     }

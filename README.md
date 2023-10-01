@@ -29,9 +29,8 @@ PHPDiff uses [semantic versioning](http://semver.org/).
 ## Tests
 PHPDiff uses automated tests to prevent code regressions.
 
-[![Build Status](https://travis-ci.org/CHItA/PHPDiff.svg?branch=master)](https://travis-ci.org/CHItA/PHPDiff)
-[![Code Coverage](https://scrutinizer-ci.com/g/CHItA/PHPDiff/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/CHItA/PHPDiff/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/CHItA/PHPDiff/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/CHItA/PHPDiff/?branch=master)
+| v1.0: ![v1.0](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=v1.0) | master ![master](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=master) |
+| --- | --- |
 
 ## License
 PHPDiff is available under the [MIT License](LICENSE).

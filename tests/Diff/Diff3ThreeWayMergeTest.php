@@ -15,16 +15,16 @@ use CHItA\PHPDiff\Differ;
 use CHItA\PHPDiff\Differ3;
 use CHItA\PHPDiff\DifferBase;
 use CHItA\PHPDiff\LongestCommonSubsequence\Algorithm\Hirschberg;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class Diff3ThreeWayMergeTest extends PHPUnit_Framework_TestCase
+class Diff3ThreeWayMergeTest extends TestCase
 {
     /**
      * @var Differ3
      */
     private $differ;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->differ = new Differ3(
             new ThreeWayMerge(new Differ(null, new Hirschberg()))

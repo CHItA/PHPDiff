@@ -13,16 +13,16 @@ namespace CHItA\PHPDiff\Test;
 use CHItA\PHPDiff\Diff3Algorithm\WeaveMerge;
 use CHItA\PHPDiff\Differ;
 use CHItA\PHPDiff\LongestCommonSubsequence\Algorithm\Hirschberg;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class Diff3AlgorithmBaseTest extends PHPUnit_Framework_TestCase
+class Diff3AlgorithmBaseTest extends TestCase
 {
     /**
      * @var WeaveMerge
      */
     private $differ;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->differ = new WeaveMerge(new Differ(null, new Hirschberg()));
     }

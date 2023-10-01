@@ -10,10 +10,10 @@
 
 namespace CHItA\PHPDiff\Test;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use CHItA\PHPDiff\LongestCommonSubsequence\Algorithm\LCSInterface;
 
-abstract class LCSTestBase extends PHPUnit_Framework_TestCase
+abstract class LCSTestBase extends TestCase
 {
     /**
      * @var LCSInterface

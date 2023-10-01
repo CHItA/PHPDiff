@@ -87,7 +87,8 @@ final class Hirschberg extends Base
             $previousRow = $currentRow;
             for ($j = 0; $j < $countSqnc2; $j++) {
                 if (($sqnc1[$i] === $sqnc2[$j] && $this->comparisonAlgorithm === null) ||
-                    ($this->comparisonAlgorithm !== null && $this->comparisonAlgorithm->compare($sqnc1[$i], $sqnc2[$j]))) {
+                    ($this->comparisonAlgorithm !== null &&
+                    $this->comparisonAlgorithm->compare($sqnc1[$i], $sqnc2[$j]))) {
                     $currentRow[$j + 1] = $previousRow[$j] + 1;
                 } else {
                     $currentRow[$j + 1] = max($currentRow[$j], $previousRow[$j + 1]);

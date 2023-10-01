@@ -130,9 +130,23 @@ final class ThreeWayMerge extends Base
         // Align the bottom of the blocks
         while ($depth1 !== $depth2) {
             if ($depth1 < $depth2) {
-                $conflict = $this->resolveEditBlock($removed, $conflict1, $diff1, $i, $depth1, $depth2 - $depth1) || $conflict;
+                $conflict = $this->resolveEditBlock(
+                    $removed,
+                    $conflict1,
+                    $diff1,
+                    $i,
+                    $depth1,
+                    $depth2 - $depth1
+                ) || $conflict;
             } else {
-                $conflict = $this->resolveEditBlock($removed, $conflict2, $diff2, $j, $depth2, $depth1 - $depth2) || $conflict;
+                $conflict = $this->resolveEditBlock(
+                    $removed,
+                    $conflict2,
+                    $diff2,
+                    $j,
+                    $depth2,
+                    $depth1 - $depth2
+                ) || $conflict;
             }
         }
 

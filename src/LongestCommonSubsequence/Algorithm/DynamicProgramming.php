@@ -44,7 +44,9 @@ final class DynamicProgramming extends Base
                 $current = ($j * ($sqnc1Length + 1)) + $i;
 
                 $matchWeight = 0;
-                if (($this->comparisonAlgorithm !== null && $this->comparisonAlgorithm->compare($sqnc1[$i - 1], $sqnc2[$j - 1])) ||
+                if ((
+                    $this->comparisonAlgorithm !== null &&
+                    $this->comparisonAlgorithm->compare($sqnc1[$i - 1], $sqnc2[$j - 1])) ||
                     ($this->comparisonAlgorithm === null && $sqnc1[$i - 1] === $sqnc2[$j - 1])) {
                     $matchWeight = $matrix[$current - $sqnc1Length - 2] + 1;
                 }
@@ -62,7 +64,9 @@ final class DynamicProgramming extends Base
 
         // Read out the LCS
         while ($i > 0 && $j > 0) {
-            if (($this->comparisonAlgorithm !== null && $this->comparisonAlgorithm->compare($sqnc1[$i - 1], $sqnc2[$j - 1])) ||
+            if ((
+                $this->comparisonAlgorithm !== null &&
+                $this->comparisonAlgorithm->compare($sqnc1[$i - 1], $sqnc2[$j - 1])) ||
                 ($this->comparisonAlgorithm === null && $sqnc1[$i - 1] === $sqnc2[$j - 1])) {
                 array_unshift($result, $sqnc1[$i - 1]);
                 $i--;
