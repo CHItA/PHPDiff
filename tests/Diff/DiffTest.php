@@ -10,18 +10,18 @@
 
 namespace CHItA\PHPDiff\Test;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 use CHItA\PHPDiff\Differ;
 use CHItA\PHPDiff\DifferBase;
 
-class DiffTest extends PHPUnit_Framework_TestCase
+class DiffTest extends TestCase
 {
     /**
      * @var Differ
      */
     private $diff;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->diff = new Differ();
     }

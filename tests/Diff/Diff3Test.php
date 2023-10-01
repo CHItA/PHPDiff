@@ -12,22 +12,22 @@ namespace CHItA\PHPDiff\Test;
 
 use CHItA\PHPDiff\Differ3;
 use CHItA\PHPDiff\DifferBase;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class Diff3Test extends PHPUnit_Framework_TestCase
+class Diff3Test extends TestCase
 {
     private static $reflectionMergeDiffMethod;
 
     private $differ;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         $reflection = new \ReflectionClass('\CHItA\PHPDiff\Differ3');
         self::$reflectionMergeDiffMethod = $reflection->getMethod('mergeOutput');
         self::$reflectionMergeDiffMethod->setAccessible(true);
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->differ = new Differ3();
     }

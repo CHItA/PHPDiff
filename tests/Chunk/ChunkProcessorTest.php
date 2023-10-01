@@ -12,16 +12,16 @@ namespace CHItA\PHPDiff\Test;
 
 use CHItA\PHPDiff\ChunkProcessor;
 use CHItA\PHPDiff\DifferBase;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class ChunkProcessorTest extends PHPUnit_Framework_TestCase
+class ChunkProcessorTest extends TestCase
 {
     /**
      * @var ChunkProcessor
      */
     private $chunkProcessor;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->chunkProcessor = $this->getObjectForTrait('\CHItA\PHPDiff\ChunkProcessor');
     }
