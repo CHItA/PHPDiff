@@ -12,12 +12,12 @@ the alpha stage.
 You can find the full feature list and the changes made to this library in the [changelog](CHANGELOG.md).
 
 ## Requirements
-PHP 5.4.0 or higher version is required.
+PHP 7.1.0 or higher is required (although it should run on 5.4 as well probably).
 
 ## Installation
 You may install PHPDiff with composer by running the following commands in your console:
 ```
-php composer.phar require chita/phpdiff:1.*
+php composer.phar require chita/phpdiff:2.*
 ```
 
 ## Documentation
@@ -29,7 +29,7 @@ PHPDiff uses [semantic versioning](http://semver.org/).
 ## Tests
 PHPDiff uses automated tests to prevent code regressions.
 
-| v1.0: ![v1.0](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=v1.0) | master ![master](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=master) |
+| v2.0: ![v2.0](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=v1.0) | master ![master](https://github.com/CHItA/TopologicalSort/workflows/Tests/badge.svg?branch=master) |
 | --- | --- |
 
 ## License
